@@ -32,11 +32,11 @@ public class BpmnPathFinder {
             FlowNode endNode = (FlowNode) modelInstance.getModelElementById(endId);
 
             if (startNode == null) {
-                System.err.println("Start node '" + startId + "' not found.");
+                System.err.println("Oops Start node '" + startId + "' not found.");
                 System.exit(-1);
             }
             if (endNode == null) {
-                System.err.println("End node '" + endId + "' not found.");
+                System.err.println("Oops End node '" + endId + "' not found.");
                 System.exit(-1);
             }
 
