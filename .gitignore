@@ -1,0 +1,33 @@
+# Gradle
+.gradle/
+build/
+
+# IDE files (VSCode, IntelliJ)
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Compiled files
+*.class
+out/
+
+# Logs
+*.log
+
+# Mac specific
+.DS_Store
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Java specific
+bin/
+tmp/

@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.camunda.bpm.model:camunda-bpmn-model:7.9.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'BpmnPathFinder'
+    }
+
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    
+    // Handle duplicate files
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
